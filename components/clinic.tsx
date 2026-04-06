@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 
 const WHATSAPP_LINK = "https://wa.me/5544988348338?text=Olá! Gostaria de agendar uma consulta."
 
+
 const clinicImages = [
   {
     id: 1,
