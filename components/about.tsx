@@ -1,8 +1,7 @@
 "use client"
 
 import { useScrollAnimation } from "@/hooks/use-scroll-animation"
-import { Button } from "@/components/ui/button"
-import { Award, GraduationCap, Heart, Stethoscope, ArrowRight, CheckCircle } from "lucide-react"
+import { Award, GraduationCap, Heart, Stethoscope, ArrowUpRight, CheckCircle } from "lucide-react"
 
 const WHATSAPP_LINK = "https://wa.me/5544988348338?text=Olá! Gostaria de agendar uma consulta."
 
@@ -25,104 +24,86 @@ export function About() {
   const { ref: ref2, isVisible: isVisible2 } = useScrollAnimation()
 
   return (
-    <section id="sobre" className="py-24 bg-secondary/30 relative overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-0 left-1/4 w-px h-32 bg-gradient-to-b from-transparent via-[#7A7566]/30 to-transparent" />
-      <div className="absolute bottom-0 right-1/4 w-px h-32 bg-gradient-to-t from-transparent via-[#7A7566]/30 to-transparent" />
+    <section id="sobre" className="py-20 md:py-32 bg-background relative overflow-hidden">
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-[#7A7566]/10 to-transparent rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16">
-          {/* Image */}
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div
             ref={ref}
-            className={`relative transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
+            className={`order-2 lg:order-1 transition-all duration-700 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
           >
-            <div className="relative max-w-lg mx-auto">
-              {/* Animated frames */}
-              <div className="absolute -inset-4 border-2 border-[#7A7566]/30 rounded-3xl transform rotate-3 transition-transform duration-500 hover:rotate-6" />
-              <div className="absolute -inset-4 border-2 border-[#7A7566]/20 rounded-3xl transform -rotate-2 transition-transform duration-500 hover:-rotate-4" />
-
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[4/5]">
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
                 <img
                   src="/doctor-portrait-2.jpg"
                   alt="Dra. Letícia Soriani"
-                  className="w-full h-full object-cover object-top"
+                  className="rounded-xl shadow-lg object-cover object-top w-full h-64 md:h-80"
                 />
-                {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 via-transparent to-transparent" />
+                <img
+                  src="/doctor-portrait-3.jpg"
+                  alt="Dra. Letícia Soriani"
+                  className="rounded-xl shadow-lg object-cover object-[center_18%] w-full h-56 md:h-72"
+                />
               </div>
-
-              {/* CRM Badge - animated */}
-              <div className="absolute -bottom-6 -right-6 bg-card px-6 py-4 rounded-2xl shadow-xl border border-border transform transition-transform duration-300 hover:scale-105">
-                <p className="text-[#7A7566] font-semibold">CRM-PR 33568</p>
-                <p className="text-muted-foreground text-sm">RQE 24948</p>
-              </div>
-
-              {/* Experience badge */}
-              <div className="absolute -top-4 -left-4 bg-[#7A7566] text-white px-5 py-3 rounded-2xl shadow-lg transform transition-transform duration-300 hover:scale-105">
-                <p className="font-bold text-2xl">10+</p>
-                <p className="text-xs opacity-90">anos</p>
+              <div className="space-y-4 pt-8">
+                <img
+                  src="/doctor-portrait.jpg"
+                  alt="Dra. Letícia Soriani - Oftalmologista"
+                  className="rounded-xl shadow-lg object-cover object-top w-full h-64 md:h-80"
+                />
+                <img
+                  src="/doctor-portrait-4.jpg"
+                  alt="Dra. Letícia Soriani"
+                  className="rounded-xl shadow-lg object-cover object-[center_18%] w-full h-56 md:h-72"
+                />
               </div>
             </div>
           </div>
 
-          {/* Content */}
           <div
             ref={ref2}
-            className={`transition-all duration-1000 delay-200 ${isVisible2 ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+            className={`order-1 lg:order-2 transition-all duration-700 delay-150 ${isVisible2 ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
           >
-            <span className="inline-block text-[#7A7566] font-medium tracking-widest text-sm mb-4 px-4 py-1 bg-[#7A7566]/10 rounded-full">
-              SOBRE
-            </span>
+            <p className="text-sm font-medium text-[#7A7566] tracking-widest uppercase mb-4">
+              Quem Sou Eu
+            </p>
 
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-2">
               Dra. Letícia Soriani
             </h2>
-            <p className="text-[#7A7566] text-xl font-medium mb-8">Muito Prazer!</p>
+            <p className="text-lg text-[#7A7566] mb-6">Oftalmologista</p>
 
-            <div className="space-y-5 text-muted-foreground leading-relaxed">
-              <p className="text-lg">
-                A Dra. Letícia Soriani é médica oftalmologista, formada com o propósito de cuidar da visão de forma completa, individualizada e centrada no paciente.
+            <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
+              <p>
+                A Dra. Letícia Soriani é médica oftalmologista, formada com o propósito de cuidar da visão de forma completa, individualizada e centrada no paciente. Ao longo de sua trajetória, construiu uma formação sólida e mantém atualização constante para oferecer diagnósticos precisos e tratamentos seguros. Sua atuação abrange áreas como catarata, olho seco, controle de miopia e cirurgia refrativa, sempre aliando conhecimento técnico, tecnologia e atenção aos detalhes.
               </p>
               <p>
-                Ao longo de sua trajetória, construiu uma formação sólida e mantém atualização constante para oferecer diagnósticos precisos e tratamentos seguros.
+                Seu atendimento vai além de protocolos e procedimentos: é baseado na escuta ativa, no acolhimento e na compreensão profunda das necessidades de cada paciente. A Dra. Letícia acredita em um cuidado integral, que considera não apenas a saúde ocular, mas também a história, os hábitos e a qualidade de vida de quem atende, construindo relações de confiança e segurança em cada consulta.
               </p>
+
               <p>
-                Sua atuação abrange áreas como catarata, olho seco, controle de miopia e cirurgia refrativa, sempre aliando conhecimento técnico, tecnologia e atenção aos detalhes.
+                Para ela, a oftalmologia é mais do que uma especialidade é uma vocação. É por meio desse olhar atento e humano que realiza seu propósito de promover saúde, bem-estar e a experiência de enxergar o mundo com mais clareza, conforto e qualidade de vida.
               </p>
-              <p>Seu atendimento vai além de protocolos e procedimentos: é baseado na escuta ativa, no acolhimento e na compreensão profunda das necessidades de cada paciente.</p>
-
-              <p>A Dra. Letícia acredita em um cuidado integral, que considera não apenas a saúde ocular, mas também a história, os hábitos e a qualidade de vida de quem atende, construindo relações de confiança e segurança em cada consulta.</p>
-
-              <p>Para ela, a oftalmologia é mais do que uma especialidade — é uma vocação. É por meio desse olhar atento e humano que realiza seu propósito de promover saúde, bem-estar e a experiência de enxergar o mundo com mais clareza, conforto e qualidade de vida.</p>
             </div>
 
-            {/* Specialties */}
-            <div className="mt-8 p-6 bg-card rounded-2xl border border-border">
-              <p className="text-sm font-medium text-foreground mb-4">Áreas de atuação:</p>
-              <div className="flex flex-wrap gap-3">
-                {specialties.map((specialty, index) => (
-                  <span
-                    key={index}
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-[#7A7566]/10 text-foreground rounded-full text-sm transition-all duration-300 hover:bg-[#7A7566]/20"
-                  >
-                    <CheckCircle className="text-[#7A7566]" size={16} />
-                    {specialty}
-                  </span>
-                ))}
-              </div>
-            </div>
+            <blockquote className="border-l-4 border-[#7A7566] pl-6 py-2 my-8">
+              <p className="text-lg text-[#7A7566] mb-0">
+                CRM-PR 33568/RQE 24948
+              </p>
+            </blockquote>
 
-            {/* Highlights Grid */}
+
+
             <div className="grid grid-cols-2 gap-4 mt-8">
               {highlights.map((item, index) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 p-4 rounded-xl bg-card border border-border transition-all duration-300 hover:border-[#7A7566]/30 hover:shadow-lg group"
+                  className="flex items-center gap-3 p-3 bg-card border border-border rounded-lg hover:border-[#7A7566]/30 hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="w-10 h-10 bg-[#7A7566]/10 rounded-lg flex items-center justify-center group-hover:bg-[#7A7566]/20 transition-colors">
+                  <div className="w-9 h-9 flex items-center justify-center shrink-0">
                     <item.icon className="text-[#7A7566]" size={20} />
                   </div>
                   <span className="text-sm text-foreground leading-tight">{item.text}</span>
@@ -130,16 +111,15 @@ export function About() {
               ))}
             </div>
 
-            <Button
-              asChild
-              size="lg"
-              className="bg-[#7A7566] hover:bg-[#a89e94] text-white font-medium px-8 py-6 text-lg transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-[#7A7566]/25 mt-10 group"
+            <a
+              href={WHATSAPP_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-10 inline-flex items-center gap-2 px-8 py-4 bg-[#7A7566] text-white font-medium rounded-full hover:bg-[#a89e94] transition-all duration-300 hover:shadow-xl hover:scale-105"
             >
-              <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-                Agende um Horário Agora
-                <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={20} />
-              </a>
-            </Button>
+              Agende um Horário Agora
+              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </a>
           </div>
         </div>
       </div>

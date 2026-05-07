@@ -35,7 +35,7 @@ export function Contact() {
     <section id="contato" className="bg-secondary/30 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-wider text-primary">
+          <p className="text-sm font-medium uppercase tracking-wider text-[#7A7566]">
             Contato
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
@@ -83,7 +83,7 @@ export function Contact() {
                   />
                 </Field>
 
-                <Button type="submit" className="w-full">
+                <Button type="submit" className="w-full bg-[#7A7566] text-white hover:bg-[#a89e94]">
                   Enviar Mensagem
                 </Button>
               </form>
@@ -95,8 +95,8 @@ export function Contact() {
               {contactInfo.map((info) => (
                 <Card key={info.title} className="border-border/50">
                   <CardContent className="flex items-start gap-4 pt-6">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                      <info.icon className="h-5 w-5 text-primary" />
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#7A7566]/10">
+                      <info.icon className="h-5 w-5 text-[#7A7566]" />
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground">{info.title}</h3>

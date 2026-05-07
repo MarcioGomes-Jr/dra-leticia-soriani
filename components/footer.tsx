@@ -31,7 +31,7 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div>
               <h3 className="font-serif text-2xl md:text-3xl font-medium mb-2">
-                Pronta para cuidar da sua visão?
+                Pronto(a) para cuidar da sua visão?
               </h3>
               <p className="text-background/60">
                 Agende sua consulta e comece seu tratamento ainda esta semana.
@@ -40,7 +40,7 @@ export function Footer() {
             <Button
               asChild
               size="lg"
-              className="bg-[#EEE7DD] hover:bg-[#ffffff] text-foreground font-medium px-8 py-6 text-lg transition-all duration-300 hover:scale-105 shrink-0"
+              className="bg-[#EEE7DD] hover:bg-white text-foreground font-medium px-8 py-6 text-lg transition-all duration-300 hover:scale-105 shrink-0"
             >
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Phone className="mr-2" size={20} />
@@ -57,7 +57,7 @@ export function Footer() {
           {/* Logo and Description */}
           <div className="md:col-span-2">
             <img
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-leticia-0Ph6fShKBg6R9DqUOPxjanj3Km0nby.avif"
+              src="/logo-leticia.avif"
               alt="Dra. Letícia Soriani"
               className="h-16 w-auto mb-6 brightness-0 invert"
             />
@@ -78,12 +78,18 @@ export function Footer() {
                 { href: "#servicos", label: "Serviços" },
                 { href: "#clinica", label: "Clínica" },
                 { href: "#sobre", label: "Sobre" },
-                { href: "#contato", label: "Instagram" },
+                { href: "https://instagram.com/draleticiasoriani", label: "Instagram" },
               ].map((link) => (
                 <a
-                  key={link.href}
+                  key={`${link.label}-${link.href}`}
                   href={link.href}
-                  onClick={(e) => handleNavClick(e, link.href)}
+                  onClick={
+                    link.href.startsWith("#")
+                      ? (e) => handleNavClick(e, link.href)
+                      : undefined
+                  }
+                  target={link.href.startsWith("http") ? "_blank" : undefined}
+                  rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
                   className="text-background/70 hover:text-[#EEE7DD] transition-colors text-sm inline-flex items-center gap-2 group"
                 >
                   <span className="w-0 h-px bg-[#EEE7DD] group-hover:w-4 transition-all duration-300" />

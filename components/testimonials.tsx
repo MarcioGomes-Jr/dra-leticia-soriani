@@ -31,7 +31,7 @@ export function Testimonials() {
     <section id="depoimentos" className="bg-background py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-wider text-primary">
+          <p className="text-sm font-medium uppercase tracking-wider text-[#7A7566]">
             Depoimentos
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
@@ -56,7 +56,7 @@ export function Testimonials() {
                 </p>
                 <div className="flex items-center gap-3">
                   <Avatar>
-                    <AvatarFallback className="bg-primary/10 text-primary">
+                    <AvatarFallback className="bg-[#7A7566]/10 text-[#7A7566]">
                       {testimonial.initials}
                     </AvatarFallback>
                   </Avatar>

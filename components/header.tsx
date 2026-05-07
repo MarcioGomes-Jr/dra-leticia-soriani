@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Menu, X } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { cn } from "@/lib/utils"
 
 const WHATSAPP_LINK = "https://wa.me/5544988348338?text=Olá! Gostaria de agendar uma consulta."
 
@@ -22,7 +22,7 @@ export function Header() {
     { href: "#servicos", label: "Serviços" },
     { href: "#clinica", label: "Clínica" },
     { href: "#sobre", label: "Sobre" },
-    { href: "#contato", label: "Contato" },
+    { href: "#clinica", label: "Contato" },
   ]
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -38,52 +38,42 @@ export function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-[#7A7566]/100 backdrop-blur-md shadow-lg py-3"
-          : "bg-[#7A7566]/100 backdrop-blur-sm py-4"
+          ? "bg-[#7A7566]/95 backdrop-blur-md shadow-sm py-3"
+          : "bg-[#7A7566] py-5"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between">
+      <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between">
         <a href="#" className="flex items-center">
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-leticia-0Ph6fShKBg6R9DqUOPxjanj3Km0nby.avif"
+            src="/logo-leticia.avif"
             alt="Dra. Letícia Soriani"
-            className="h-12 md:h-14 w-auto"
+            className="h-11 md:h-17 w-auto"
           />
         </a>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
-              key={link.href}
+              key={`${link.label}-${link.href}`}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className={`transition-colors text-sm font-medium tracking-wide ${
-                isScrolled 
-                  ? "text-white/90 hover:text-white" 
-                  : "text-white/90 hover:text-white"
-              }`}
+              className="text-sm font-medium text-white/90 hover:text-white transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-white hover:after:w-full after:transition-all after:duration-300"
             >
               {link.label}
             </a>
           ))}
-          <Button
-            asChild
-            className={`font-medium px-6 transition-all duration-300 ${
-              isScrolled 
-                ? "bg-white hover:bg-white/80 text-[#7A7566]" 
-                : "bg-white hover:bg-white/80 text-[#7A7566]"
-            }`}
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-4 px-6 py-2.5 bg-white text-[#7A7566] text-sm font-medium rounded-full hover:bg-white/80 transition-all duration-300 hover:shadow-lg"
           >
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              Agendar Consulta
-            </a>
-          </Button>
+            Agendar Consulta
+          </a>
         </nav>
 
-        {/* Mobile Menu Button */}
         <button
-          className={`md:hidden p-2 ${isScrolled ? "text-white" : "text-white"}`}
+          className="lg:hidden p-2 text-white"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Menu"
         >
@@ -91,31 +81,31 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       <div
-        className={`md:hidden absolute top-full left-0 right-0 bg-card shadow-lg transition-all duration-300 overflow-hidden ${
-          isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={cn(
+          "lg:hidden overflow-hidden transition-all duration-500 ease-in-out",
+          isMenuOpen ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
+        )}
       >
-        <nav className="flex flex-col p-4 gap-4">
+        <nav className="container mx-auto px-4 flex flex-col gap-4 py-4 border-t border-white/15 bg-[#7A7566]">
           {navLinks.map((link) => (
             <a
-              key={link.href}
+              key={`${link.label}-${link.href}`}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-foreground/80 hover:text-foreground transition-colors py-2 font-medium"
+              className="text-base font-medium text-white/90 hover:text-white transition-colors duration-300 py-2"
             >
               {link.label}
             </a>
           ))}
-          <Button
-            asChild
-            className="bg-[#7A7566] hover:bg-[#a89e94] text-white font-medium w-full"
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-2 px-6 py-3 bg-white text-[#7A7566] text-sm font-medium rounded-full text-center hover:bg-white/80 transition-all duration-300"
           >
-            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
-              Agendar Consulta
-            </a>
-          </Button>
+            Agendar Consulta
+          </a>
         </nav>
       </div>
     </header>
