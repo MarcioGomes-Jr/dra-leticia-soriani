@@ -19,8 +19,8 @@ export function InstagramSection() {
   const { ref, isVisible } = useScrollAnimation()
 
   return (
-    <section className="py-20 md:py-32 bg-card relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background opacity-50" />
+    <section id="instagram" className="py-20 md:py-32 bg-card relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-[#D8C17A]/8 to-background opacity-60" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div
@@ -30,14 +30,14 @@ export function InstagramSection() {
           }`}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#7A7566]/10 rounded-full mb-6">
-            <Instagram className="w-4 h-4 text-[#7A7566]" />
+            <Instagram className="w-4 h-4 text-[#A98E3F]" />
             <span className="text-sm text-[#7A7566]">
               @draleticiasoriani
             </span>
           </div>
 
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-foreground mb-4 text-balance">
-            Siga minhas redes sociais e acompanhe meu trabalho de perto
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium text-[#7A7566] mb-4 text-balance">
+            Siga minhas redes sociais e acompanhe meu <span className="text-[#A98E3F]">trabalho</span> de perto
           </h2>
           
         </div>

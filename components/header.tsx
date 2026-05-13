@@ -20,9 +20,10 @@ export function Header() {
 
   const navLinks = [
     { href: "#servicos", label: "Serviços" },
-    { href: "#clinica", label: "Clínica" },
     { href: "#sobre", label: "Sobre" },
-    { href: "#clinica", label: "Contato" },
+    { href: "#clinica", label: "Clínica" },
+    { href: "#instagram", label: "Instagram" },
+    { href: "#contato", label: "Contato" },
   ]
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -57,7 +58,7 @@ export function Header() {
               key={`${link.label}-${link.href}`}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-sm font-medium text-white/90 hover:text-white transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-white hover:after:w-full after:transition-all after:duration-300"
+              className="text-sm font-medium text-white/90 hover:text-[#D8C17A] transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-[#D8C17A] hover:after:w-full after:transition-all after:duration-300"
             >
               {link.label}
             </a>
@@ -66,7 +67,7 @@ export function Header() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-4 px-6 py-2.5 bg-white text-[#7A7566] text-sm font-medium rounded-full hover:bg-white/80 transition-all duration-300 hover:shadow-lg"
+            className="ml-4 px-6 py-2.5 bg-[#EEE6DE] text-[#7A7566] text-sm font-medium rounded-full hover:bg-white transition-all duration-300 hover:shadow-lg"
           >
             Agendar Consulta
           </a>
@@ -93,7 +94,7 @@ export function Header() {
               key={`${link.label}-${link.href}`}
               href={link.href}
               onClick={(e) => handleNavClick(e, link.href)}
-              className="text-base font-medium text-white/90 hover:text-white transition-colors duration-300 py-2"
+              className="text-base font-medium text-white/90 hover:text-[#D8C17A] transition-colors duration-300 py-2"
             >
               {link.label}
             </a>
@@ -102,7 +103,7 @@ export function Header() {
             href={WHATSAPP_LINK}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-2 px-6 py-3 bg-white text-[#7A7566] text-sm font-medium rounded-full text-center hover:bg-white/80 transition-all duration-300"
+            className="mt-2 px-6 py-3 bg-[#EEE6DE] text-[#7A7566] text-sm font-medium rounded-full text-center hover:bg-white transition-all duration-300"
           >
             Agendar Consulta
           </a>

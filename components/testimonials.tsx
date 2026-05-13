@@ -31,7 +31,7 @@ export function Testimonials() {
     <section id="depoimentos" className="bg-background py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-wider text-[#7A7566]">
+          <p className="text-sm font-medium uppercase tracking-wider text-[#A98E3F]">
             Depoimentos
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">

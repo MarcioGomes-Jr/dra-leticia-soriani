@@ -21,7 +21,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "E-mail",
-    content: "contato@draanabeatriz.com.br",
+    content: "draleticiasoriani@gmail.com",
   },
   {
     icon: Clock,
@@ -35,7 +35,7 @@ export function Contact() {
     <section id="contato" className="bg-secondary/30 py-16 md:py-24">
       <div className="mx-auto max-w-6xl px-4">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <p className="text-sm font-medium uppercase tracking-wider text-[#7A7566]">
+          <p className="text-sm font-medium uppercase tracking-wider text-[#A98E3F]">
             Contato
           </p>
           <h2 className="mt-2 font-serif text-3xl font-bold text-foreground md:text-4xl">
@@ -83,7 +83,7 @@ export function Contact() {
                   />
                 </Field>
 
-                <Button type="submit" className="w-full bg-[#7A7566] text-white hover:bg-[#a89e94]">
+                <Button type="submit" className="w-full bg-[#7A7566] text-white hover:bg-[#7A7566]">
                   Enviar Mensagem
                 </Button>
               </form>
@@ -96,7 +96,7 @@ export function Contact() {
                 <Card key={info.title} className="border-border/50">
                   <CardContent className="flex items-start gap-4 pt-6">
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#7A7566]/10">
-                      <info.icon className="h-5 w-5 text-[#7A7566]" />
+                      <info.icon className="h-5 w-5 text-[#A98E3F]" />
                     </div>
                     <div>
                       <h3 className="font-medium text-foreground">{info.title}</h3>

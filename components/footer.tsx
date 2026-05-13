@@ -21,9 +21,9 @@ export function Footer() {
   }
 
   return (
-    <footer className="bg-foreground text-background relative overflow-hidden">
+    <footer className="bg-[#7A7566] text-background relative overflow-hidden">
       {/* Decorative top border */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#7A7566] to-transparent" />
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#D8C17A] to-transparent" />
 
       {/* CTA Section */}
       <div className="border-b border-background/10">
@@ -31,16 +31,16 @@ export function Footer() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
             <div>
               <h3 className="font-serif text-2xl md:text-3xl font-medium mb-2">
-                Pronto(a) para cuidar da sua visão?
+                Pronto(a) para cuidar da sua <span className="text-[#D8C17A]">visão?</span>
               </h3>
-              <p className="text-background/60">
+              <p className="text-background/70 italic">
                 Agende sua consulta e comece seu tratamento ainda esta semana.
               </p>
             </div>
             <Button
               asChild
               size="lg"
-              className="bg-[#EEE7DD] hover:bg-white text-foreground font-medium px-8 py-6 text-lg transition-all duration-300 hover:scale-105 shrink-0"
+              className="bg-[#EEE6DE] hover:bg-white text-[#7A7566] font-medium px-8 py-6 text-lg transition-all duration-300 hover:scale-105 shrink-0"
             >
               <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
                 <Phone className="mr-2" size={20} />
@@ -61,24 +61,24 @@ export function Footer() {
               alt="Dra. Letícia Soriani"
               className="h-16 w-auto mb-6 brightness-0 invert"
             />
-            <p className="text-background/70 leading-relaxed max-w-md mb-4">
+            <p className="text-background/70 leading-relaxed max-w-md mb-4 text-justify">
               Compromisso, experiência e cuidado individual para a sua saúde ocular.
               Atendimento humanizado e tecnologia de ponta em Maringá - PR.
             </p>
-            <p className="text-[#EEE7DD] text-sm font-medium">
+            <p className="text-[#D8C17A] text-sm font-medium">
               CRM-PR 33568 / RQE 24948
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-medium mb-6 text-[#EEE7DD] text-lg">Navegação</h4>
+            <h4 className="font-medium mb-6 text-[#D8C17A] text-lg">Navegação</h4>
             <nav className="flex flex-col gap-3">
               {[
                 { href: "#servicos", label: "Serviços" },
-                { href: "#clinica", label: "Clínica" },
                 { href: "#sobre", label: "Sobre" },
-                { href: "https://instagram.com/draleticiasoriani", label: "Instagram" },
+                { href: "#clinica", label: "Clínica" },
+                { href: "#instagram", label: "Instagram" },
               ].map((link) => (
                 <a
                   key={`${link.label}-${link.href}`}
@@ -90,9 +90,9 @@ export function Footer() {
                   }
                   target={link.href.startsWith("http") ? "_blank" : undefined}
                   rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  className="text-background/70 hover:text-[#EEE7DD] transition-colors text-sm inline-flex items-center gap-2 group"
+                  className="text-background/70 hover:text-[#D8C17A] transition-colors text-sm inline-flex items-center gap-2 group"
                 >
-                  <span className="w-0 h-px bg-[#EEE7DD] group-hover:w-4 transition-all duration-300" />
+                  <span className="w-0 h-px bg-[#D8C17A] group-hover:w-4 transition-all duration-300" />
                   {link.label}
                 </a>
               ))}
@@ -101,27 +101,27 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-medium mb-6 text-[#EEE7DD] text-lg">Contato</h4>
+            <h4 className="font-medium mb-6 text-[#D8C17A] text-lg">Contato</h4>
             <div className="space-y-4">
               <a
                 href="https://wa.me/5544988348338"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 text-background/70 hover:text-[#EEE7DD] transition-colors group"
+                className="flex items-center gap-3 text-background/70 hover:text-[#D8C17A] transition-colors group"
               >
-                <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center group-hover:bg-[#EEE7DD]/20 transition-colors">
+                <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center group-hover:bg-[#D8C17A]/20 transition-colors">
                   <Phone size={18} />
                 </div>
                 <span className="text-sm">(44) 98834-8338</span>
               </a>
               <a
-                href="mailto:contato@draleticiasoriani.com.br"
-                className="flex items-center gap-3 text-background/70 hover:text-[#EEE7DD] transition-colors group"
+                href="mailto:draleticiasoriani@gmail.com"
+                className="flex items-center gap-3 text-background/70 hover:text-[#D8C17A] transition-colors group"
               >
-                <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center group-hover:bg-[#EEE7DD]/20 transition-colors">
+                <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center group-hover:bg-[#D8C17A]/20 transition-colors">
                   <Mail size={18} />
                 </div>
-                <span className="text-sm break-all">contato@draleticiasoriani.com.br</span>
+                <span className="text-sm break-all">draleticiasoriani@gmail.com</span>
               </a>
               <div className="flex items-start gap-3 text-background/70">
                 <div className="w-10 h-10 bg-background/10 rounded-lg flex items-center justify-center shrink-0">
@@ -157,16 +157,24 @@ export function Footer() {
             </span>
 
             <span className="flex items-center gap-1">
-              Feito com <Heart size={14} className="text-[#EEE7DD]" /> por Over Performance
+              Feito com <Heart size={14} className="text-[#D8C17A]" /> por{" "}
+              <a
+                href="https://www.instagram.com/overperformance_/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#D8C17A] transition-colors"
+              >
+                Over Performance
+              </a>
             </span>
           </p>
 
           <button
             onClick={scrollToTop}
-            className="flex items-center gap-2 text-background/50 hover:text-[#EEE7DD] transition-colors text-sm group"
+            className="flex items-center gap-2 text-background/50 hover:text-[#D8C17A] transition-colors text-sm group"
           >
             Voltar ao topo
-            <div className="w-8 h-8 bg-background/10 rounded-full flex items-center justify-center group-hover:bg-[#EEE7DD]/20 transition-colors">
+            <div className="w-8 h-8 bg-background/10 rounded-full flex items-center justify-center group-hover:bg-[#D8C17A]/20 transition-colors">
               <ArrowUp size={16} className="group-hover:-translate-y-0.5 transition-transform" />
             </div>
           </button>
