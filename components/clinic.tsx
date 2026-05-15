@@ -10,25 +10,25 @@ const WHATSAPP_LINK = "https://wa.me/5544988348338?text=Olá! Gostaria de agenda
 const clinicImages = [
   {
     id: 1,
-    src: "/clinica-1.jpeg",
-    alt: "Recepção da clínica",
+    src: "/clinic-1.jpeg",
+    alt: "clinica",
   },
   {
     id: 2,
     src: "/clinic-2.jpeg",
-    alt: "Sala de exames oftalmológicos",
+    alt: "clinica",
    
   },
   {
     id: 3,
     src: "/clinic-3.jpeg",
-    alt: "Equipamentos modernos",
+    alt: "clinica",
    
   },
   {
     id: 4,
     src: "/clinic-4.jpeg",
-    alt: "Sala de espera",
+    alt: "clinica",
   
   }
 ]

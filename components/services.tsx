@@ -66,7 +66,7 @@ export function Services() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`group p-6 bg-card rounded-xl border border-border hover:border-[#D8C17A]/70 hover:shadow-lg hover:shadow-[#7A7566]/10 transition-all duration-300 ${
+              className={`group p-6 bg-card rounded-xl border border-border text-center flex flex-col items-center hover:border-[#D8C17A]/70 hover:shadow-lg hover:shadow-[#7A7566]/10 transition-all duration-300 ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
@@ -77,7 +77,7 @@ export function Services() {
               <h3 className="font-serif text-xl font-medium text-[#7A7566] mb-3 group-hover:text-[#A98E3F] transition-colors">
                 {service.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed text-justify">
+              <p className="text-muted-foreground text-sm leading-relaxed text-center">
                 {service.description}
               </p>
               <a
