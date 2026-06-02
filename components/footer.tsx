@@ -58,7 +58,7 @@ export function Footer() {
           <div className="md:col-span-2">
             <img
               src="/logo-leticia.avif"
-              alt="Dra. Letícia Soriani"
+              alt="Dra. Letícia Soriani Oftalmologia"
               className="h-16 w-auto mb-6 brightness-0 invert"
             />
             <p className="text-background/70 leading-relaxed max-w-md mb-4 text-justify">

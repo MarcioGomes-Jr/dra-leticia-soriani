@@ -11,24 +11,24 @@ const clinicImages = [
   {
     id: 1,
     src: "/clinic-1.jpeg",
-    alt: "clinica",
+    alt: "Recepção da clínica da Dra. Letícia Soriani em Maringá",
   },
   {
     id: 2,
     src: "/clinic-2.jpeg",
-    alt: "clinica",
+    alt: "Ambiente de atendimento oftalmológico da clínica em Maringá",
    
   },
   {
     id: 3,
     src: "/clinic-3.jpeg",
-    alt: "clinica",
+    alt: "Consultório da Dra. Letícia Soriani na Avenida Brasil em Maringá",
    
   },
   {
     id: 4,
     src: "/clinic-4.jpeg",
-    alt: "clinica",
+    alt: "Estrutura da clínica oftalmológica da Dra. Letícia Soriani",
   
   }
 ]

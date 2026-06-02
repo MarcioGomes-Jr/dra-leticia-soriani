@@ -66,7 +66,7 @@ export function Hero() {
               <div className="absolute -inset-4 bg-gradient-to-br from-[#7A7566]/25 via-[#D8C17A]/25 to-transparent rounded-full blur-3xl opacity-60" />
               <img
                 src="/doctor-portrait.jpg"
-                alt="Dra. Letícia Soriani - Oftalmologista"
+                alt="Dra. Letícia Soriani, oftalmologista em Maringá"
                 className="relative rounded-2xl shadow-2xl object-cover object-top w-full aspect-[4/5]"
               />
             </div>

@@ -47,7 +47,7 @@ export function Header() {
         <a href="#" className="flex items-center">
           <img
             src="/logo-leticia.avif"
-            alt="Dra. Letícia Soriani"
+            alt="Dra. Letícia Soriani Oftalmologia"
             className="h-11 md:h-17 w-auto"
           />
         </a>

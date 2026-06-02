@@ -7,12 +7,12 @@ import { useScrollAnimation } from "@/hooks/use-scroll-animation"
 const instagramUrl = "https://instagram.com/draleticiasoriani"
 
 const instagramPosts = [
-  "/instagram/post-1.jpg",
-  "/instagram/post-2.jpg",
-  "/instagram/post-3.jpg",
-  "/instagram/post-4.jpg",
-  "/instagram/post-5.jpg",
-  "/instagram/post-6.jpg",
+  "/instagram-post-1.jpg",
+  "/instagram-post-2.jpg",
+  "/instagram-post-3.jpg",
+  "/instagram-post-4.jpg",
+  "/instagram-post-5.jpg",
+  "/instagram-post-6.jpg",
 ]
 
 export function InstagramSection() {

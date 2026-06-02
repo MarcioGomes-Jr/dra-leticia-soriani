@@ -38,24 +38,24 @@ export function About() {
               <div className="space-y-4">
                 <img
                   src="/doctor-portrait-2.jpg"
-                  alt="Dra. Letícia Soriani"
+                  alt="Dra. Letícia Soriani em retrato profissional"
                   className="rounded-xl shadow-lg object-cover object-top w-full h-64 md:h-80"
                 />
                 <img
                   src="/doctor-portrait-3.jpg"
-                  alt="Dra. Letícia Soriani"
+                  alt="Dra. Letícia Soriani, médica oftalmologista"
                   className="rounded-xl shadow-lg object-cover object-[center_18%] w-full h-56 md:h-72"
                 />
               </div>
               <div className="space-y-4 pt-8">
                 <img
                   src="/doctor-portrait.jpg"
-                  alt="Dra. Letícia Soriani - Oftalmologista"
+                  alt="Dra. Letícia Soriani, oftalmologista em Maringá"
                   className="rounded-xl shadow-lg object-cover object-top w-full h-64 md:h-80"
                 />
                 <img
                   src="/doctor-portrait-4.jpg"
-                  alt="Dra. Letícia Soriani"
+                  alt="Dra. Letícia Soriani em consultório oftalmológico"
                   className="rounded-xl shadow-lg object-cover object-[center_18%] w-full h-56 md:h-72"
                 />
               </div>
